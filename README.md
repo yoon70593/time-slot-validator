@@ -31,3 +31,10 @@ Windows are weekly-recurring with inclusive start and exclusive end, both in loc
   - `isAvailable(epochMs: number): boolean`
 
 `weekday` is ISO 1=Mon..7=Sun. `startSecond` and `endSecond` are local seconds from midnight in `[0, 86400]`.
+
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+
