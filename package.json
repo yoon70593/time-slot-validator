@@ -1,6 +1,6 @@
 {
   "name": "time-slot-validator",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Checks whether a given UTC instant falls within a set of recurring availability windows defined in a specific timezone.",
   "type": "module",
   "main": "src/index.js",
